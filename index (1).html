@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ระบบยาสำรอง (เฉลิมพระเกียรติ2ใต้)</title>
+<meta name="description" content="ระบบยาสำรองเฉลิมพระเกียรติ2ใต้">
+<base target="_top">
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #1a3c6e; }
+  #loading {
+    position: fixed; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 14px;
+    background: #1a3c6e; color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif;
+    transition: opacity .35s ease; z-index: 2;
+  }
+  #loading.hide { opacity: 0; pointer-events: none; }
+  .spinner {
+    width: 38px; height: 38px; border-radius: 50%;
+    border: 4px solid rgba(255,255,255,.25); border-top-color: #fff;
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  #loading p { margin: 0; font-size: 15px; opacity: .9; }
+  iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: 0; z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>กำลังโหลดระบบะ...</p>
+  </div>
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbwrcjWsnhShbtb08ubJVMVYSRPBov3cjCvfSyAIl_suxdPztFkEjVFJwAA8UvR3Qc8S/exec"
+    onload="document.getElementById('loading').classList.add('hide')"
+    title="ระบบยาสำรองเฉลิมพระเกียรติ2ใต้">
+  </iframe>
+</body>
+</html>
